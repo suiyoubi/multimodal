@@ -7,6 +7,7 @@
 from callbacks.multimodal_eval import MultimodalEvalCallback
 from data import (
     ImageDataModule,
+    ImageDataModuleOld,
     MLMDataModule,
     MultiDataModule,
     VLDataModule,
@@ -25,8 +26,15 @@ def main():
         seed_everything(config.training.seed, workers=True)
 
     datamodules = []
-    imagenet_datamodule = ImageDataModule(
-        **build_datamodule_kwargs(config.datasets.image, config.training)
+    # imagenet_datamodule = ImageDataModule(
+    #     **build_datamodule_kwargs(config.datasets.image, config.training)
+    # )
+    imagenet_datamodule = ImageDataModuleOld(
+        train_root='/datasets/imagenet/uncompressed_train',
+        val_root='/datasets/imagenet/uncompressed_val',
+        batch_size=16,
+        num_workers=16,
+        allow_unenven_batchs=False,
     )
     if "image" in config.datasets.selected:
         datamodules.append(imagenet_datamodule)
