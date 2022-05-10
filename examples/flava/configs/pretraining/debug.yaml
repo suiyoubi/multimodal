@@ -33,7 +33,7 @@ datasets:
         key: aps/imagenet2012
         subset: default
         extra_kwargs:
-          data_dir: ${oc.env:IMAGENET_TAR}
+          data_dir: ${oc.env:IMAGENET_TAR, .}
   text:
     _target_: definitions.TrainingSingleDatasetInfo
     train:
