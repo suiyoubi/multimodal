@@ -30,10 +30,10 @@ def main():
     #     **build_datamodule_kwargs(config.datasets.image, config.training)
     # )
     imagenet_datamodule = ImageDataModuleOld(
-        train_root='/datasets/imagenet/uncompressed_train',
-        val_root='/datasets/imagenet/uncompressed_val',
-        batch_size=16,
-        num_workers=16,
+        train_root=config.image_folder.train_root,
+        val_root=config.image_folder.val_root,
+        batch_size=config.training.batch_size,
+        num_workers=config.training.num_workers,
         allow_unenven_batchs=False,
     )
     if "image" in config.datasets.selected:

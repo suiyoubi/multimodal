@@ -85,3 +85,4 @@ class FLAVAArguments:
     datasets: TrainingDatasetsInfo = TrainingDatasetsInfo()
     training: TrainingArguments = TrainingArguments()
     model: ModelArguments = ModelArguments()
+    image_folder: Dict[str, str] = field(default=dict)
