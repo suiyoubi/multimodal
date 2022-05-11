@@ -50,11 +50,14 @@ def run_imagenet_zero_shot(model, dataloader, device, text_transform, *args, **k
     classifier = _zero_shot_classifier(model, device, text_transform)
     logger.info("Classifier built")
     top1, top5, n = 0.0, 0.0, 0.0
-    for sample in tqdm(dataloader):
-        images = sample["image"]
-        target = sample["label"]
-        images = images.to(device)
+    for images, target in tqdm(dataloader):
+        # print(sample)
+        # images = sample["image"]
+        # target = sample["label"]
+        # images: {'image', 'image_cookbook', 'image_mask'}
+        # images = images.to(device)
         target = target.to(device)
+        images = images['image'].to(device)
 
         # predict
         # if hasattr(model, "module"):
