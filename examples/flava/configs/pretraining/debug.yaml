@@ -3,7 +3,9 @@ training:
   _target_: definitions.TrainingArguments
   lightning:
     max_steps: 450000
-    gpus: -1
+    accelerator: gpu
+    devices: -1
+    num_nodes: 1
     progress_bar_refresh_rate: 50
     val_check_interval: 10000
     limit_val_batches: 20
