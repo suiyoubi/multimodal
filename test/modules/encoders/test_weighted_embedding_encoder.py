@@ -8,7 +8,6 @@ import unittest
 from copy import deepcopy
 
 import torch
-from test.test_utils import assert_expected
 from torch import nn
 from torchmultimodal.modules.encoders.weighted_embedding_encoder import (
     WeightedEmbeddingEncoder,
@@ -46,7 +45,9 @@ class TestEmbeddingEncoder(unittest.TestCase):
                 [1.4, 1.4],
             ]
         )
-        assert_expected(actual, expected)
+        torch.testing.assert_close(
+            actual, expected, msg=f"Actual: {actual}, expected: {expected}"
+        )
 
     def test_forward_mean_pooling(self):
         input = torch.Tensor(
@@ -65,7 +66,9 @@ class TestEmbeddingEncoder(unittest.TestCase):
                 [0.7, 0.7],
             ]
         )
-        assert_expected(actual, expected)
+        torch.testing.assert_close(
+            actual, expected, msg=f"Actual: {actual}, expected: {expected}"
+        )
 
     def test_forward_max_pooling(self):
         input = torch.Tensor(
@@ -84,7 +87,9 @@ class TestEmbeddingEncoder(unittest.TestCase):
                 [0.8, 0.8],
             ]
         )
-        assert_expected(actual, expected)
+        torch.testing.assert_close(
+            actual, expected, msg=f"Actual: {actual}, expected: {expected}"
+        )
 
     def test_forward_hash_no_padding(self):
         input = torch.Tensor(
@@ -103,7 +108,9 @@ class TestEmbeddingEncoder(unittest.TestCase):
                 [0.8, 0.8],
             ]
         )
-        assert_expected(actual, expected)
+        torch.testing.assert_close(
+            actual, expected, msg=f"Actual: {actual}, expected: {expected}"
+        )
 
     def test_forward_hash_zero_padding(self):
         input = torch.Tensor(
@@ -124,7 +131,9 @@ class TestEmbeddingEncoder(unittest.TestCase):
                 [1.4, 0.8],
             ]
         )
-        assert_expected(actual, expected)
+        torch.testing.assert_close(
+            actual, expected, msg=f"Actual: {actual}, expected: {expected}"
+        )
 
     def test_forward_hash_invalid_padding(self):
         embedding = deepcopy(self.embedding)
@@ -151,4 +160,6 @@ class TestEmbeddingEncoder(unittest.TestCase):
                 [0.7, 0.7],
             ]
         )
-        assert_expected(actual, expected)
+        torch.testing.assert_close(
+            actual, expected, msg=f"Actual: {actual}, expected: {expected}"
+        )
