@@ -537,14 +537,13 @@ class YFCCDataModule(LightningDataModule):
         # Shuffle (in-place) and split the dataframe
         train_df = meta_df.sample(frac=self.train_data_fraction, random_state=self.data_split_random_seed).reset_index(drop=True)
         val_df = meta_df.drop(train_df.index).sample(frac=1.0).reset_index(drop=True)
-        if self.image_transform is None:
-            self.image_transforms = default_image_pretraining_transforms()
         if self.text_transform is None:
+            # TODO: May need to change to use whole word mask vocab later
             self.text_tokenizer = BertTokenizerFast.from_pretrained(TEXT_DEFAULT_TOKENIZER) # should use BertTokenizerFast
             self.text_transform = default_text_transform(self.text_tokenizer, max_text_length=VL_MAX_LENGTH_DEFAULT)
         # Train and val datasets
-        self.train_dataset = YFCCDataset(train_df, self.image_root, self.image_transform, self.text_transform, self.itm_probability)
-        self.train_dataset = YFCCDataset(val_df, self.image_root, self.image_transform, self.text_transform, self.itm_probability)
+        self.train_dataset = YFCCDataset(train_df, self.image_root, self.train_image_transform, self.text_transform, self.itm_probability)
+        self.val_dataset = YFCCDataset(val_df, self.image_root, self.test_image_transform, self.text_transform, self.itm_probability)
 
 
 class TorchVisionDataModule(LightningDataModule):
