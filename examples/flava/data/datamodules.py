@@ -513,6 +513,7 @@ class YFCCDataModule(LightningDataModule):
         num_workers: int = 4,
         ignore_index: int = -1,
         itm_probability: float = 0.1,
+        mlm_probability: float = 0.15,
         allow_uneven_batches: bool = False,
         **kwargs,
     ):
@@ -531,12 +532,14 @@ class YFCCDataModule(LightningDataModule):
         self.data_split_random_seed = data_split_random_seed
         self.train_data_fraction = train_data_fraction
         self.train_data_fraction = train_data_fraction
+        self.mlm_probability = mlm_probability
     def setup(self, stage=None):
         # Read the metada data file: csv
         meta_df = pd.read_csv(self.metadata_path, compression='gzip', header=0, usecols=['key', 'title'])
         # Shuffle (in-place) and split the dataframe
         train_df = meta_df.sample(frac=self.train_data_fraction, random_state=self.data_split_random_seed).reset_index(drop=True)
         val_df = meta_df.drop(train_df.index).sample(frac=1.0).reset_index(drop=True)
+        print(f'YFCC Dataset: Training Examples: {len(train_df)}, Validation Examples: {len(val_df)}')
         if self.text_transform is None:
             # TODO: May need to change to use whole word mask vocab later
             self.text_tokenizer = BertTokenizerFast.from_pretrained(TEXT_DEFAULT_TOKENIZER) # should use BertTokenizerFast
