@@ -20,6 +20,7 @@ from transformers import (
     TRANSFORMERS_CACHE,
 )
 from transformers.data.data_collator import torch_default_data_collator
+from torchvision.datasets import ImageFolder
 
 from .transforms import (
     default_image_pretraining_transforms,
@@ -126,6 +127,96 @@ class ImageDataModule(LightningDataModule):
             batch = pad_batch(batch, self.batch_size)
         return batch
 
+class ImageDataModuleOld(LightningDataModule):
+    def __init__(
+        self,
+        train_root: str,
+        val_root: str,
+        transforms: Optional[Tuple[Callable, Callable]] = None,
+        use_subset_sampler: bool = False,
+        batch_size: int = 32,
+        num_workers: int = 4,
+        allow_uneven_batches: bool = False,
+        **kwargs: Any,
+    ):
+        super().__init__()
+        self.train_root = train_root
+        self.val_root = val_root
+        self.batch_size = batch_size
+        self.num_workers = num_workers
+        self.allow_uneven_batches = allow_uneven_batches
+        self.use_subset_sampler = use_subset_sampler
+
+        if transforms is None:
+            transforms = default_image_pretraining_transforms()
+
+        self.train_transform, self.test_transform = transforms
+
+    def setup(self, stage=None):
+        # TODO: Add instructions to generate val set folder from pytorch examples repo.
+        self.train_dataset = ImageFolder(
+            self.train_root, transform=self.train_transform
+        )
+        self.val_dataset = ImageFolder(self.val_root, transform=self.test_transform)
+
+    def _build_train_sampler(self, dataset):
+        idxs = np.zeros(len(dataset.targets))
+        target_array = np.array(dataset.targets)
+        k = 50
+        for c in range(1000):
+            m = target_array == c
+            n = len(idxs[m])
+            arr = np.zeros(n)
+            arr[:k] = 1
+            np.random.shuffle(arr)
+            idxs[m] = arr
+
+        idxs = idxs.astype("int")
+        sampler = torch.utils.data.SubsetRandomSampler(np.where(idxs)[0])
+        return sampler
+
+    def train_dataloader(self):
+        if self.use_subset_sampler:
+            sampler = self._build_train_sampler(self.train_dataset)
+        else:
+            sampler = None
+        return torch.utils.data.DataLoader(
+            self.train_dataset,
+            batch_size=self.batch_size,
+            num_workers=self.num_workers,
+            sampler=sampler,
+            shuffle=True,
+            # uneven batches can cause distributed issues,
+            # drop last batch to prevent those.
+            # ideally, we don't need to drop these for unimodal cases
+            # but just to be safe
+            drop_last=True,
+        )
+
+    def val_dataloader(self):
+        return torch.utils.data.DataLoader(
+            self.val_dataset,
+            batch_size=self.batch_size,
+            num_workers=self.num_workers,
+            sampler=None,
+            shuffle=False,
+            # uneven batches can cause distributed issues,
+            # drop last batch to prevent those.
+            # ideally, we don't need to drop these for unimodal cases
+            # but just to be safe
+            drop_last=True,
+        )
+
+    def test_dataloader(self):
+        return self.val_dataloader()
+
+    def on_before_batch_transfer(self, batch, *args):
+        batch, target = batch
+        batch["target"] = target
+        if batch["target"].size(0) < self.batch_size and not self.allow_uneven_batches:
+            batch = pad_batch(batch, self.batch_size)
+        return batch
+
 
 class TextDataModule(LightningDataModule):
     def __init__(
@@ -157,6 +248,7 @@ class TextDataModule(LightningDataModule):
         transform = partial(
             encode_text_batch,
             tokenizer=self.tokenizer,
+            text_columns=['text'],
             padding="max_length",
             max_length=self.max_length,
             truncation=True,
