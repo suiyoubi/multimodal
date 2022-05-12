@@ -544,7 +544,58 @@ class YFCCDataModule(LightningDataModule):
         # Train and val datasets
         self.train_dataset = YFCCDataset(train_df, self.image_root, self.train_image_transform, self.text_transform, self.itm_probability)
         self.val_dataset = YFCCDataset(val_df, self.image_root, self.test_image_transform, self.text_transform, self.itm_probability)
+    def train_dataloader(self):
+        return torch.utils.data.DataLoader(
+            self.train_dataset,
+            batch_size=self.batch_size,
+            num_workers=self.num_workers,
+            sampler=None,
+            shuffle=True,
+            collate_fn=self._build_collator(),
+            # uneven batches can cause distributed issues,
+            # drop last batch to prevent those.
+            drop_last=True,
+        )
 
+    def val_dataloader(self):
+        return torch.utils.data.DataLoader(
+            self.val_dataset,
+            batch_size=self.batch_size,
+            num_workers=self.num_workers,
+            sampler=None,
+            shuffle=False,
+            collate_fn=self._build_collator(),
+            # uneven batches can cause distributed issues,
+            # drop last batch to prevent those.
+            drop_last=True,
+        )
+
+    def _build_collator(self):
+        return DataCollatorForWholeWordMaskRetainingBatch(
+            self.text_tokenizer, mlm_probability=self.mlm_probability
+        )
+
+    def on_before_batch_transfer(self, batch, *args):
+        batch.pop("token_type_ids", None)
+        mask = batch.pop("attention_mask", None)
+        if (
+            mask is not None
+            and mask.size(0) < self.batch_size
+            and not self.allow_uneven_batches
+        ):
+            batch = pad_batch(batch, self.batch_size)
+        return batch
+
+    def on_after_batch_transfer(self, batch, *args):
+        text_masked = batch.pop("input_ids")
+        mlm_labels = batch.pop("labels", None)
+        mlm_labels[mlm_labels == -100] = self.ignore_index
+        text = text_masked.detach().clone()
+        text[mlm_labels != -1] = mlm_labels[mlm_labels != -1]
+        batch.update(
+            {"mlm_labels": mlm_labels, "text": text, "text_masked": text_masked}
+        )
+        return batch
 
 class TorchVisionDataModule(LightningDataModule):
     def __init__(
