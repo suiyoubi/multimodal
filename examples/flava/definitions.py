@@ -73,6 +73,7 @@ class TrainingArguments:
     adam_weight_decay: float = 0.01
     adam_betas: Tuple[float, float] = field(default_factory=lambda: (0.9, 0.999))
     warmup_steps: int = 2000
+    prev_v_num: int = 0
 
 
 @dataclass
