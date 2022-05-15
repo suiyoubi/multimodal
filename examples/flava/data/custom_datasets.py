@@ -24,12 +24,16 @@ class YFCCDataset(Dataset):
         # Transforms
         output = {}
         if self.itm_probability > 0:
-            output["itm_labels"] = torch.ones((1), dtype=torch.long)
+            output["itm_labels"] = torch.ones(1, dtype=torch.long)
         if random.random() < self.itm_probability:
             random_idx = random.randint(0, len(self.df) - 1)
             while idx == random_idx:
                 text = self.df.iloc[random_idx, 1]
-            output["itm_labels"] = torch.zeros((1), dtype=torch.long)
+            output["itm_labels"] = torch.zeros(1, dtype=torch.long)
+        # TODO Need to refactor the logic here
         output.update(self.image_transform(image))
-        output.update(self.text_transform(text))
+        text_infos = self.text_transform(text)
+        for info in text_infos:
+            text_infos[info] = text_infos[info].squeeze()
+        output.update(text_infos)
         return output
