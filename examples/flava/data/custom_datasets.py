@@ -30,8 +30,10 @@ class YFCCDataset(Dataset):
             while idx == random_idx:
                 text = self.df.iloc[random_idx, 1]
             output["itm_labels"] = torch.zeros(1, dtype=torch.long)
-        # TODO Need to refactor the logic here
+
         output.update(self.image_transform(image))
+        # TODO Need to refactor the logic here
+        output["itm_labels"] = output["itm_labels"].squeeze()
         text_infos = self.text_transform(text)
         for info in text_infos:
             text_infos[info] = text_infos[info].squeeze()
