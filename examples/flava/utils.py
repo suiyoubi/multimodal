@@ -4,7 +4,7 @@
 # This source code is licensed under the BSD-style license found in the
 # LICENSE file in the root directory of this source tree.
 
-from definitions import DatasetInfo, FLAVAArguments, TrainingArguments,TrainingYFCCDatasetInfo
+from definitions import DatasetInfo, FLAVAArguments, ImageFolderInfo, TrainingArguments, TrainingYFCCDatasetInfo
 from hydra.utils import instantiate
 from omegaconf import OmegaConf
 
@@ -16,6 +16,15 @@ def build_datamodule_kwargs(dm_config: DatasetInfo, training_config: TrainingArg
         "batch_size": dm_config.batch_size or training_config.batch_size,
         "num_workers": dm_config.num_workers or training_config.num_workers,
         "allow_uneven_batches": dm_config.allow_uneven_batches,
+    }
+
+def build_imagenet_datamodule_kwargs(if_config: ImageFolderInfo, training_config: TrainingArguments):
+    return {
+        "train_root": if_config.train_root,
+        "val_root": if_config.val_root,
+        "batch_size": if_config.batch_size or training_config.batch_size,
+        "num_workers": if_config.num_workers or training_config.num_workers,
+        "allow_uneven_batches": if_config.allow_uneven_batches,
     }
 
 def build_yfcc_datamodule_kwargs(yfcc_config: TrainingYFCCDatasetInfo, training_config: TrainingArguments):

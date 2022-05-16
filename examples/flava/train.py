@@ -6,12 +6,12 @@
 
 from callbacks.multimodal_eval import MultimodalEvalCallback
 from data import ImageDataModule, ImageDataModuleOld, MLMDataModule, MultiDataModule, VLDataModule, YFCCDataModule
-from definitions import FLAVAArguments
+from definitions import DatasetInfo, FLAVAArguments, TrainingSingleDatasetInfo, HFDatasetInfo
 from model import FLAVAPreTrainingLightningModule
 from omegaconf import OmegaConf
 from pytorch_lightning import seed_everything, Trainer
 from pytorch_lightning.callbacks import LearningRateMonitor, ModelCheckpoint
-from utils import build_config, build_datamodule_kwargs, build_yfcc_datamodule_kwargs
+from utils import build_config, build_datamodule_kwargs, build_imagenet_datamodule_kwargs, build_yfcc_datamodule_kwargs
 from datetime import timedelta
 import os
 
@@ -22,18 +22,13 @@ def main():
         seed_everything(config.training.seed, workers=True)
 
     datamodules = []
-    # imagenet_datamodule = ImageDataModule(
-    #     **build_datamodule_kwargs(config.datasets.image, config.training)
-    # )
-    imagenet_datamodule = ImageDataModuleOld(
-        train_root=config.image_folder.train_root,
-        val_root=config.image_folder.val_root,
-        batch_size=config.training.batch_size,
-        num_workers=config.training.num_workers,
-        allow_unenven_batchs=False,
-    )
     if "image" in config.datasets.selected:
+        imagenet_datamodule = ImageDataModuleOld(
+            **build_imagenet_datamodule_kwargs(config.datasets.image, config.training)
+        )
         datamodules.append(imagenet_datamodule)
+    else:
+        imagenet_datamodule = None
 
     if "text" in config.datasets.selected:
         mlm_datamodule = MLMDataModule(
@@ -42,9 +37,31 @@ def main():
         datamodules.append(mlm_datamodule)
 
     if "vl" in config.datasets.selected:
-        vl_datamodule = YFCCDataModule(
-            **build_yfcc_datamodule_kwargs(config.datasets.vl, config.training)
-        )
+        # We only have YFCC dataset on draco, use HFDataset for other usage
+        if os.path.isfile(config.datasets.vl.metadata_path):
+            vl_datamodule = YFCCDataModule(
+                **build_yfcc_datamodule_kwargs(config.datasets.vl, config.training)
+            )
+        else:
+            print('Building VL DataModule based on HF for testing')
+            vl_datamodule = VLDataModule(
+                **build_datamodule_kwargs(
+                    TrainingSingleDatasetInfo(
+                        train=[HFDatasetInfo(
+                            key='red_caps',
+                            subset='jellyfish',
+                            rename_columns=[['caption', 'text']]
+                        )],
+                        val=[HFDatasetInfo(
+                            key='red_caps',
+                            subset='jellyfish',
+                            rename_columns=[['caption', 'text']],
+                            split_key_mapping={'validation': 'train'}
+                        )]
+                    ),
+                    config.training
+                )
+            )
         datamodules.append(vl_datamodule)
 
     datamodule = MultiDataModule(datamodules)
@@ -60,18 +77,20 @@ def main():
         **config.model,
     )
 
-    trainer = Trainer(
-        **OmegaConf.to_container(config.training.lightning),
-        callbacks=[
+    callbacks = [
             LearningRateMonitor(logging_interval="step"),
-            MultimodalEvalCallback(imagenet_datamodule=imagenet_datamodule),
             ModelCheckpoint(
                 filename="{epoch}-{step}",
                 train_time_interval=timedelta(minutes=config.training.save_every_min),
                 save_last=True,
                 save_top_k = -1
             )
-        ],
+    ]
+    if imagenet_datamodule:
+        callbacks.append(MultimodalEvalCallback(imagenet_datamodule=imagenet_datamodule))
+    trainer = Trainer(
+        **OmegaConf.to_container(config.training.lightning),
+        callbacks=callbacks,
         strategy="ddp",
     )
 
