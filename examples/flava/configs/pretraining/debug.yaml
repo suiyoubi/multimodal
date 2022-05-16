@@ -18,6 +18,8 @@ training:
   adam_eps: 1e-8
   adam_weight_decay: 1e-2
   warmup_steps: 2000
+  prev_v_num: 0
+  save_every_min: 60
 
 image_folder:
   train_root: '${oc.env:IMAGENET_TRAIN, /datasets/imagenet/uncompressed_train}'

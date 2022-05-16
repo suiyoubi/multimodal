@@ -17,8 +17,10 @@ from definitions import FLAVAArguments
 from model import FLAVAPreTrainingLightningModule
 from omegaconf import OmegaConf
 from pytorch_lightning import Trainer, seed_everything
-from pytorch_lightning.callbacks import LearningRateMonitor
+from pytorch_lightning.callbacks import LearningRateMonitor, ModelCheckpoint
 from utils import build_config, build_datamodule_kwargs, build_yfcc_datamodule_kwargs
+from datetime import timedelta
+import os
 
 
 def main():
@@ -70,10 +72,32 @@ def main():
         callbacks=[
             LearningRateMonitor(logging_interval="step"),
             MultimodalEvalCallback(imagenet_datamodule=imagenet_datamodule),
+            ModelCheckpoint(
+                filename="{epoch}-{step}",
+                train_time_interval=timedelta(minutes=config.training.save_every_min),
+                save_last=True,
+                save_top_k = -1
+            )
         ],
         strategy="ddp",
     )
-    trainer.fit(model, datamodule=datamodule)
+
+    prev_ckpt = os.path.join(
+        config.training.lightning['default_root_dir'], 
+        'lightning_logs', 
+        f'version_{config.training.prev_v_num}', 
+        'checkpoints', 
+        'last.ckpt'
+        )
+    if os.path.exists(prev_ckpt):
+        print(f'Resuming from last checkpoint: {prev_ckpt}')
+    else:
+        prev_ckpt = None
+
+    trainer.fit(
+        model, datamodule=datamodule,
+        ckpt_path=prev_ckpt
+    )
     trainer.validate(model, datamodule=datamodule)
 
 

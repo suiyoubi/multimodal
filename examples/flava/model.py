@@ -58,6 +58,7 @@ class FLAVAPreTrainingLightningModule(LightningModule):
         self.adam_weight_decay = adam_weight_decay
         self.warmup_steps = warmup_steps
         self.max_steps = max_steps
+        self.save_hyperparameters()
 
     def training_step(self, batch, batch_idx):
         output = self._step(batch, batch_idx)
