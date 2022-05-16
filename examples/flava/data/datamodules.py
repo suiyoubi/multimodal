@@ -10,6 +10,8 @@ from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
 import torch
 import torchvision
+import numpy as np
+import pandas as pd
 from definitions import HFDatasetInfo, TorchVisionDatasetInfo
 from pytorch_lightning import LightningDataModule
 from transformers import (
@@ -21,6 +23,7 @@ from transformers import (
 )
 from transformers.data.data_collator import torch_default_data_collator
 from torchvision.datasets import ImageFolder
+from transformers import BertTokenizerFast
 
 from .transforms import (
     default_image_pretraining_transforms,
@@ -34,7 +37,7 @@ from .transforms import (
     VL_MAX_LENGTH_DEFAULT,
 )
 from .utils import build_datasets_from_info, fetch_images
-
+from .custom_datasets import YFCCDataset
 
 def transform_image(transform, sample):
     sample.update(transform(sample["image"]))
@@ -496,6 +499,108 @@ class VLDataModule(LightningDataModule):
         )
         return batch
 
+
+class YFCCDataModule(LightningDataModule):
+    def __init__(
+        self,
+        metadata_path: str,
+        image_root: str,
+        image_transforms: Optional[Tuple[Callable, Callable]] = None,
+        text_transforms: Optional[Tuple[Callable, Callable]] = None,
+        train_data_fraction: float = 0.99,
+        data_split_random_seed: int = 123,
+        batch_size: int = 32,
+        num_workers: int = 4,
+        ignore_index: int = -1,
+        itm_probability: float = 0.1,
+        mlm_probability: float = 0.15,
+        allow_uneven_batches: bool = False,
+        **kwargs,
+    ):
+        # For now we try to make YFCCDataModule as similar as possible to HuggingFace VLDataModule
+        # may need to change it later for our specific needs
+        super().__init__()
+        self.metadata_path = metadata_path
+        self.image_root = image_root
+        if image_transforms is None:
+            image_transforms = default_image_pretraining_transforms()
+        self.train_image_transform, self.test_image_transform = image_transforms
+        self.text_transform = text_transforms
+        self.batch_size = batch_size
+        self.num_workers = num_workers
+        self.ignore_index = ignore_index
+        self.itm_probability = itm_probability
+        self.allow_uneven_batches = allow_uneven_batches
+        self.data_split_random_seed = data_split_random_seed
+        self.train_data_fraction = train_data_fraction
+        self.train_data_fraction = train_data_fraction
+        self.mlm_probability = mlm_probability
+    def setup(self, stage=None):
+        # Read the metada data file: csv
+        meta_df = pd.read_csv(self.metadata_path, compression='gzip', header=0, usecols=['key', 'title'])
+        # Shuffle (in-place) and split the dataframe
+        train_df = meta_df.sample(frac=self.train_data_fraction, random_state=self.data_split_random_seed).reset_index(drop=True)
+        val_df = meta_df.drop(train_df.index).sample(frac=1.0).reset_index(drop=True)
+        print(f'YFCC Dataset: Training Examples: {len(train_df)}, Validation Examples: {len(val_df)}')
+        if self.text_transform is None:
+            # TODO: May need to change to use whole word mask vocab later
+            self.text_tokenizer = BertTokenizerFast.from_pretrained(TEXT_DEFAULT_TOKENIZER) # should use BertTokenizerFast
+            self.text_transform = default_text_transform(self.text_tokenizer, max_text_length=VL_MAX_LENGTH_DEFAULT)
+        # Train and val datasets
+        self.train_dataset = YFCCDataset(train_df, self.image_root, self.train_image_transform, self.text_transform, self.itm_probability)
+        self.val_dataset = YFCCDataset(val_df, self.image_root, self.test_image_transform, self.text_transform, self.itm_probability)
+    def train_dataloader(self):
+        return torch.utils.data.DataLoader(
+            self.train_dataset,
+            batch_size=self.batch_size,
+            num_workers=self.num_workers,
+            sampler=None,
+            shuffle=True,
+            collate_fn=self._build_collator(),
+            # uneven batches can cause distributed issues,
+            # drop last batch to prevent those.
+            drop_last=True,
+        )
+
+    def val_dataloader(self):
+        return torch.utils.data.DataLoader(
+            self.val_dataset,
+            batch_size=self.batch_size,
+            num_workers=self.num_workers,
+            sampler=None,
+            shuffle=False,
+            collate_fn=self._build_collator(),
+            # uneven batches can cause distributed issues,
+            # drop last batch to prevent those.
+            drop_last=True,
+        )
+
+    def _build_collator(self):
+        return DataCollatorForWholeWordMaskRetainingBatch(
+            self.text_tokenizer, mlm_probability=self.mlm_probability
+        )
+
+    def on_before_batch_transfer(self, batch, *args):
+        batch.pop("token_type_ids", None)
+        mask = batch.pop("attention_mask", None)
+        if (
+            mask is not None
+            and mask.size(0) < self.batch_size
+            and not self.allow_uneven_batches
+        ):
+            batch = pad_batch(batch, self.batch_size)
+        return batch
+
+    def on_after_batch_transfer(self, batch, *args):
+        text_masked = batch.pop("input_ids")
+        mlm_labels = batch.pop("labels", None)
+        mlm_labels[mlm_labels == -100] = self.ignore_index
+        text = text_masked.detach().clone()
+        text[mlm_labels != -1] = mlm_labels[mlm_labels != -1]
+        batch.update(
+            {"mlm_labels": mlm_labels, "text": text, "text_masked": text_masked}
+        )
+        return batch
 
 class TorchVisionDataModule(LightningDataModule):
     def __init__(
