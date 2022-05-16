@@ -6,7 +6,7 @@
 
 from callbacks.multimodal_eval import MultimodalEvalCallback
 from data import ImageDataModule, ImageDataModuleOld, MLMDataModule, MultiDataModule, VLDataModule, YFCCDataModule
-from definitions import FLAVAArguments
+from definitions import DatasetInfo, FLAVAArguments, TrainingSingleDatasetInfo, HFDatasetInfo
 from model import FLAVAPreTrainingLightningModule
 from omegaconf import OmegaConf
 from pytorch_lightning import seed_everything, Trainer
@@ -37,9 +37,31 @@ def main():
         datamodules.append(mlm_datamodule)
 
     if "vl" in config.datasets.selected:
-        vl_datamodule = YFCCDataModule(
-            **build_yfcc_datamodule_kwargs(config.datasets.vl, config.training)
-        )
+        # We only have YFCC dataset on draco, use HFDataset for other usage
+        if os.path.isfile(config.datasets.vl.metadata_path):
+            vl_datamodule = YFCCDataModule(
+                **build_yfcc_datamodule_kwargs(config.datasets.vl, config.training)
+            )
+        else:
+            print('Building VL DataModule based on HF for testing')
+            vl_datamodule = VLDataModule(
+                **build_datamodule_kwargs(
+                    TrainingSingleDatasetInfo(
+                        train=[HFDatasetInfo(
+                            key='red_caps',
+                            subset='jellyfish',
+                            rename_columns=[['caption', 'text']]
+                        )],
+                        val=[HFDatasetInfo(
+                            key='red_caps',
+                            subset='jellyfish',
+                            rename_columns=[['caption', 'text']],
+                            split_key_mapping={'validation': 'train'}
+                        )]
+                    ),
+                    config.training
+                )
+            )
         datamodules.append(vl_datamodule)
 
     datamodule = MultiDataModule(datamodules)

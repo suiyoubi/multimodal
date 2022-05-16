@@ -20,8 +20,8 @@ def build_datamodule_kwargs(dm_config: DatasetInfo, training_config: TrainingArg
 
 def build_imagenet_datamodule_kwargs(if_config: ImageFolderInfo, training_config: TrainingArguments):
     return {
-        "train_infos": if_config.train_root,
-        "val_infos": if_config.val_root,
+        "train_root": if_config.train_root,
+        "val_root": if_config.val_root,
         "batch_size": if_config.batch_size or training_config.batch_size,
         "num_workers": if_config.num_workers or training_config.num_workers,
         "allow_uneven_batches": if_config.allow_uneven_batches,

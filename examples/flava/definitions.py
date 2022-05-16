@@ -75,7 +75,7 @@ class ImageFolderInfo:
 @dataclass
 class TrainingDatasetsInfo:
     selected: List[str] = field(default_factory=lambda: ["image", "text", "vl"])
-    image: Optional[TrainingSingleDatasetInfo] = None
+    image: Optional[ImageFolderInfo] = None
     text: Optional[TrainingSingleDatasetInfo] = None
     vl: Optional[TrainingYFCCDatasetInfo] = None
     num_classes: int = MISSING
