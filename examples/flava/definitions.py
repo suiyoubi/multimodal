@@ -53,11 +53,24 @@ class TrainingSingleDatasetInfo:
 
 
 @dataclass
+class TrainingYFCCDatasetInfo:
+    metadata_path: str = None
+    image_root: str = None
+    train_data_fraction: Optional[float] = 0.99
+    data_split_random_seed: Optional[int] = 123
+    itm_probability: Optional[float] = 0.1
+    mlm_probability: Optional[float] = 0.15
+    batch_size: Optional[int] = None
+    num_workers: Optional[int] = None
+    allow_uneven_batches: bool = False
+
+
+@dataclass
 class TrainingDatasetsInfo:
     selected: List[str] = field(default_factory=lambda: ["image", "text", "vl"])
     image: Optional[TrainingSingleDatasetInfo] = None
     text: Optional[TrainingSingleDatasetInfo] = None
-    vl: Optional[TrainingSingleDatasetInfo] = None
+    vl: Optional[TrainingYFCCDatasetInfo] = None
     num_classes: int = MISSING
 
 

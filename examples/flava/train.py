@@ -11,6 +11,7 @@ from data import (
     MLMDataModule,
     MultiDataModule,
     VLDataModule,
+    YFCCDataModule,
 )
 from definitions import FLAVAArguments
 from model import FLAVAPreTrainingLightningModule
@@ -20,6 +21,9 @@ from pytorch_lightning.callbacks import LearningRateMonitor, ModelCheckpoint
 from utils import build_config, build_datamodule_kwargs
 from datetime import timedelta
 import os
+from pytorch_lightning.callbacks import LearningRateMonitor
+from utils import build_config, build_datamodule_kwargs, build_yfcc_datamodule_kwargs
+
 
 def main():
     config: FLAVAArguments = build_config()
@@ -47,8 +51,8 @@ def main():
         datamodules.append(mlm_datamodule)
 
     if "vl" in config.datasets.selected:
-        vl_datamodule = VLDataModule(
-            **build_datamodule_kwargs(config.datasets.vl, config.training)
+        vl_datamodule = YFCCDataModule(
+            **build_yfcc_datamodule_kwargs(config.datasets.vl, config.training)
         )
         datamodules.append(vl_datamodule)
 

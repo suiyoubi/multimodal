@@ -45,18 +45,6 @@ datasets:
         key: wikitext
         subset: wikitext-103-raw-v1
   vl:
-    _target_: definitions.TrainingSingleDatasetInfo
-    train:
-      - _target_: definitions.HFDatasetInfo
-        key: red_caps
-        subset: jellyfish
-        rename_columns:
-          - ["caption", "text"]
-    val:
-      - _target_: definitions.HFDatasetInfo
-        key: red_caps
-        subset: jellyfish
-        rename_columns:
-          - ["caption", "text"]
-        split_key_mapping:
-          validation: train
+    _target_: definitions.TrainingYFCCDatasetInfo
+    metadata_path: ${oc.env:YFCC_META, .}
+    image_root: ${oc.env:YFCC_IMAGE, .}
