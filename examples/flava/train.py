@@ -74,7 +74,7 @@ def main():
             MultimodalEvalCallback(imagenet_datamodule=imagenet_datamodule),
             ModelCheckpoint(
                 filename="{epoch}-{step}",
-                train_time_interval=timedelta(minutes=1),
+                train_time_interval=timedelta(minutes=config.training.save_every_min),
                 save_last=True,
                 save_top_k = -1
             )

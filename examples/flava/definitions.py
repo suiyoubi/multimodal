@@ -87,6 +87,7 @@ class TrainingArguments:
     adam_betas: Tuple[float, float] = field(default_factory=lambda: (0.9, 0.999))
     warmup_steps: int = 2000
     prev_v_num: int = 0
+    save_every_min: int = 60
 
 
 @dataclass
