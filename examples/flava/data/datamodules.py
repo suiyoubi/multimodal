@@ -517,6 +517,8 @@ class YFCCDataModule(LightningDataModule):
         allow_uneven_batches: bool = False,
         **kwargs,
     ):
+        # For now we try to make YFCCDataModule as similar as possible to HuggingFace VLDataModule
+        # may need to change it later for our specific needs
         super().__init__()
         self.metadata_path = metadata_path
         self.image_root = image_root

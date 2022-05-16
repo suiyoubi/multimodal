@@ -25,6 +25,7 @@ def build_yfcc_datamodule_kwargs(yfcc_config: TrainingYFCCDatasetInfo, training_
         "train_data_fraction": yfcc_config.train_data_fraction,
         "data_split_random_seed": yfcc_config.data_split_random_seed,
         "itm_probability": yfcc_config.itm_probability,
+        "mlm_probability": yfcc_config.mlm_probability,
         "batch_size": yfcc_config.batch_size or training_config.batch_size,
         "num_workers": yfcc_config.num_workers or training_config.num_workers,
         "allow_uneven_batches": yfcc_config.allow_uneven_batches,
