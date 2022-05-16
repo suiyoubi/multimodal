@@ -64,6 +64,13 @@ class TrainingYFCCDatasetInfo:
     num_workers: Optional[int] = None
     allow_uneven_batches: bool = False
 
+@dataclass
+class ImageFolderInfo:
+    train_root: str
+    val_root: str
+    batch_size: Optional[int] = None
+    num_workers: Optional[int] = None
+    allow_uneven_batches: bool = False
 
 @dataclass
 class TrainingDatasetsInfo:
@@ -100,4 +107,3 @@ class FLAVAArguments:
     datasets: TrainingDatasetsInfo = TrainingDatasetsInfo()
     training: TrainingArguments = TrainingArguments()
     model: ModelArguments = ModelArguments()
-    image_folder: Dict[str, str] = field(default=dict)
