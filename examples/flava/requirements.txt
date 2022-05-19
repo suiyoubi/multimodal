@@ -6,3 +6,8 @@ DALL-E==0.1
 omegaconf==2.1.2
 hydra-core==1.1.2
 transformers
+# Dependencies for CLIP
+ftfy 
+regex 
+tqdm
+git+https://github.com/openai/CLIP.git
