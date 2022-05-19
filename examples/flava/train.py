@@ -43,7 +43,7 @@ def main():
                 **build_yfcc_datamodule_kwargs(config.datasets.vl, config.training)
             )
         else:
-            print('Building VL DataModule based on HF for testing')
+            print(f'{config.datasets.vl.metadata_path} not exists. Building VL DataModule based on HF for testing')
             vl_datamodule = VLDataModule(
                 **build_datamodule_kwargs(
                     TrainingSingleDatasetInfo(
