@@ -225,6 +225,7 @@ class TextDataModule(LightningDataModule):
     def __init__(
         self,
         train_infos: List[HFDatasetInfo],
+        text_columns: List[str],
         val_infos: Optional[List[HFDatasetInfo]] = None,
         tokenizer: Optional[Callable] = None,
         max_length: int = 512,
@@ -235,37 +236,39 @@ class TextDataModule(LightningDataModule):
     ):
         super().__init__()
         self.train_dataset_infos = train_infos
+        self.text_columns = text_columns
         self.val_dataset_infos = val_infos
         if self.val_dataset_infos is None:
             self.val_dataset_infos = train_infos
         self.tokenizer = tokenizer
+        if self.tokenizer is None:
+            self.tokenizer = BertTokenizer.from_pretrained(TEXT_DEFAULT_TOKENIZER)
         self.max_length = max_length
         self.batch_size = batch_size
         self.num_workers = num_workers
         self.allow_uneven_batches = allow_uneven_batches
-
-    def setup(self, stage=None):
-        if self.tokenizer is None:
-            self.tokenizer = BertTokenizer.from_pretrained(TEXT_DEFAULT_TOKENIZER)
-
-        transform = partial(
+        self.transform = partial(
             encode_text_batch,
             tokenizer=self.tokenizer,
-            text_columns=['text'],
             padding="max_length",
             max_length=self.max_length,
             truncation=True,
             return_tensors="pt",
             return_special_tokens_mask=True,
+            text_columns=self.text_columns,
+            return_batch=True,
         )
+
+    def setup(self, stage=None):
+
         self.train_dataset = build_datasets_from_info(
             self.train_dataset_infos, split="train"
         )
-        self.train_dataset.set_transform(transform)
+        self.train_dataset.set_transform(self.transform)
         self.val_dataset = build_datasets_from_info(
             self.val_dataset_infos, split="validation"
         )
-        self.val_dataset.set_transform(transform)
+        self.val_dataset.set_transform(self.transform)
 
     def train_dataloader(self):
         return self._build_dataloader(self.train_dataset)
@@ -303,14 +306,40 @@ class MLMDataModule(TextDataModule):
     def __init__(
         self,
         train_infos: List[HFDatasetInfo],
+        text_columns: List[str],
         val_infos: Optional[List[HFDatasetInfo]] = None,
         mlm_probability: float = 0.15,
         ignore_index: int = -1,
         **kwargs: Any,
     ):
-        super().__init__(train_infos, val_infos, **kwargs)
+        super().__init__(train_infos, text_columns, val_infos, **kwargs)
         self.mlm_probability = mlm_probability
         self.ignore_index = ignore_index
+
+
+    def setup(self, stage=None):
+        if self.tokenizer is None:
+            self.tokenizer = BertTokenizer.from_pretrained(TEXT_DEFAULT_TOKENIZER)
+        transform = partial(
+            encode_text_batch,
+            tokenizer=self.tokenizer,
+            padding="max_length",
+            max_length=self.max_length,
+            truncation=True,
+            return_tensors="pt",
+            return_special_tokens_mask=True,
+            text_columns=self.text_columns,
+            return_batch=False,
+        )
+        self.train_dataset = build_datasets_from_info(
+            self.train_dataset_infos, split="train"
+        )
+        self.train_dataset.set_transform(transform)
+        self.val_dataset = build_datasets_from_info(
+            self.val_dataset_infos, split="validation"
+        )
+        self.val_dataset.set_transform(transform)
+
 
     def _build_dataloader(self, dataset, drop_last=True, shuffle=True):
         # uneven batches can cause distributed issues,

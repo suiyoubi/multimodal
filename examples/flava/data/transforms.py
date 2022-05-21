@@ -41,13 +41,13 @@ def encode_text(text, tokenizer, *args, **kwargs):
     return tokenizer(text, *args, **kwargs)
 
 
-def encode_text_batch(batch, tokenizer, text_columns=None, *args, **kwargs):
-    # if text_columns is None:
-    #     text_columns = ["sentence1", "sentence2"]
-    #     # print(f'batch:{batch}')
-    # texts = [batch[column] for column in text_columns]
-    # batch.update(tokenizer(*texts, *args, **kwargs))
-    return tokenizer(batch['text'], *args, **kwargs)
+def encode_text_batch(batch, tokenizer, text_columns, return_batch=False, *args, **kwargs):
+    texts = [batch[column] for column in text_columns]
+    tokens = tokenizer(*texts, *args, **kwargs)
+    if return_batch:
+        batch.update(tokens)
+        return batch
+    return tokens
 
 
 def transform_image_dict(transform, image_dict, *args, **kwargs):

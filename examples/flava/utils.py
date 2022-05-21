@@ -10,13 +10,15 @@ from omegaconf import OmegaConf
 
 
 def build_datamodule_kwargs(dm_config: DatasetInfo, training_config: TrainingArguments):
-    return {
+    kwargs = {
         "train_infos": dm_config.train,
         "val_infos": dm_config.val,
         "batch_size": dm_config.batch_size or training_config.batch_size,
         "num_workers": dm_config.num_workers or training_config.num_workers,
         "allow_uneven_batches": dm_config.allow_uneven_batches,
     }
+    kwargs.update(dm_config.datamodule_extra_kwargs)
+    return kwargs
 
 def build_imagenet_datamodule_kwargs(if_config: ImageFolderInfo, training_config: TrainingArguments):
     return {

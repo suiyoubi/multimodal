@@ -50,6 +50,7 @@ class TrainingSingleDatasetInfo:
     batch_size: Optional[int] = None
     num_workers: Optional[int] = None
     allow_uneven_batches: bool = False
+    datamodule_extra_kwargs: Dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
