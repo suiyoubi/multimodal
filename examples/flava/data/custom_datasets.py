@@ -1,3 +1,4 @@
+from regex import E
 import torch
 import random
 import os
@@ -34,7 +35,12 @@ class YFCCDataset(Dataset):
         output.update(self.image_transform(image))
         # TODO Need to refactor the logic here
         output["itm_labels"] = output["itm_labels"].squeeze()
-        text_infos = self.text_transform(text)
+        try:
+            text_infos = self.text_transform(text)
+        except ValueError as e:
+            text_infos = self.text_transform("")
+            print(e)
+            print(f"ERROR: text is {text} for idx {idx}, image filename is {image_filename}")
         for info in text_infos:
             text_infos[info] = text_infos[info].squeeze()
         output.update(text_infos)
