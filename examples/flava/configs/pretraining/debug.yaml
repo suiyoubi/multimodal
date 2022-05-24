@@ -38,6 +38,8 @@ datasets:
       - _target_: definitions.HFDatasetInfo
         key: wikitext
         subset: wikitext-103-raw-v1
+    datamodule_extra_kwargs:
+      text_columns: ["text"]
   vl:
     _target_: definitions.TrainingYFCCDatasetInfo
     metadata_path: ${oc.env:YFCC_META, .}
