@@ -13,7 +13,7 @@ from torchmultimodal.models.flava import (
     flava_model_for_pretraining,
 )
 from transformers.optimization import get_cosine_schedule_with_warmup
-
+import torchmetrics
 
 def get_optimizers_for_lightning(
     model: torch.nn.Module,
@@ -140,6 +140,7 @@ class FLAVAClassificationLightningModule(LightningModule):
         self.warmup_steps = warmup_steps
         self.max_steps = max_steps
         self.adam_betas = adam_betas
+        self.accuracy = torchmetrics.Accuracy(subset_accuracy=True)
 
     def training_step(self, batch, batch_idx):
         output = self._step(batch, batch_idx)
@@ -153,7 +154,17 @@ class FLAVAClassificationLightningModule(LightningModule):
             "validation/losses/classification", output.loss, prog_bar=True, logger=True
         )
 
+        _, predicted = torch.max(output.logits, 1)
+        self.accuracy.update(predicted, batch.get("labels", None))
+        
+        self.log('validation/val_acc_step', self.accuracy.compute())
         return output.loss
+
+    def validation_epoch_end(self, outputs) -> None:
+        accuracy = self.accuracy.compute()
+        self.log("validation/accuracy", accuracy)
+        # TODO Make it only print in one process
+        print(f'Validation Accuracy: {accuracy}')
 
     def _step(self, batch, batch_idx):
         if "image" in batch and ("text" in batch or "text_masked" in batch):
@@ -172,7 +183,6 @@ class FLAVAClassificationLightningModule(LightningModule):
             labels=batch.get("labels", None),
         )
 
-        # TODO: Add accuracy metric to this later.
         return output
 
     def configure_optimizers(self):
