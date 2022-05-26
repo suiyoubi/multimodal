@@ -83,7 +83,6 @@ def main():
                 filename="{epoch}-{step}",
                 train_time_interval=timedelta(minutes=config.training.save_every_min),
                 save_last=True,
-                save_top_k = 2
             )
     ]
     if imagenet_datamodule:
