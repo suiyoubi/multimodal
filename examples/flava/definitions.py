@@ -96,6 +96,7 @@ class TrainingArguments:
     warmup_steps: int = 2000
     prev_v_num: int = 0
     save_every_min: int = 60
+    metrics: List[str] = field(default_factory=lambda: ['accuracy']) 
 
 
 @dataclass

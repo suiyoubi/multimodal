@@ -4,7 +4,7 @@
 # This source code is licensed under the BSD-style license found in the
 # LICENSE file in the root directory of this source tree.
 
-from typing import Any, Tuple
+from typing import Any, Tuple, List
 
 import torch
 from pytorch_lightning import LightningModule
@@ -128,6 +128,7 @@ class FLAVAClassificationLightningModule(LightningModule):
         adam_betas: Tuple[int, int] = (0.9, 0.999),
         warmup_steps: int = 2000,
         max_steps: int = 450000,
+        metrics: List[str] = None,
         **flava_classification_kwargs: Any,
     ):
         super().__init__()
@@ -140,7 +141,20 @@ class FLAVAClassificationLightningModule(LightningModule):
         self.warmup_steps = warmup_steps
         self.max_steps = max_steps
         self.adam_betas = adam_betas
-        self.accuracy = torchmetrics.Accuracy(subset_accuracy=True)
+        self.metrics = torch.nn.ModuleList()
+        for metric in metrics:
+            if metric == 'accuracy':
+                self.metrics.append(torchmetrics.Accuracy())
+            elif metric == 'F1':
+                self.metrics.append(torchmetrics.F1Score(num_classes=num_classes))
+            elif metric == 'PCC':
+                self.metrics.append(torchmetrics.PearsonCorrCoef())
+            elif metric == 'MCC':
+                self.metrics.append(torchmetrics.MatthewsCorrCoef(num_classes=num_classes))
+            elif metric == 'AUROC':
+                self.metrics.append(torchmetrics.AUROC(num_classes=num_classes))
+            else:
+                print(f'Not valid metric named: {metric}')
 
     def training_step(self, batch, batch_idx):
         output = self._step(batch, batch_idx)
@@ -155,16 +169,15 @@ class FLAVAClassificationLightningModule(LightningModule):
         )
 
         _, predicted = torch.max(output.logits, 1)
-        self.accuracy.update(predicted, batch.get("labels", None))
-        
-        self.log('validation/val_acc_step', self.accuracy.compute())
+        for metric in self.metrics:
+            metric.update(predicted, batch.get("labels", None))
+
         return output.loss
 
     def validation_epoch_end(self, outputs) -> None:
-        accuracy = self.accuracy.compute()
-        self.log("validation/accuracy", accuracy)
-        # TODO Make it only print in one process
-        print(f'Validation Accuracy: {accuracy}')
+        for metric in self.metrics:
+            score = metric.compute()
+            self.log(f"validation/{type(metric).__name__}", score, prog_bar=True)
 
     def _step(self, batch, batch_idx):
         if "image" in batch and ("text" in batch or "text_masked" in batch):
