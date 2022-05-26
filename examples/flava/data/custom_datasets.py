@@ -29,6 +29,7 @@ class YFCCDataset(Dataset):
         if random.random() < self.itm_probability:
             random_idx = random.randint(0, len(self.df) - 1)
             while idx == random_idx:
+                random_idx = random.randint(0, len(self.df) - 1)
                 text = self.df.iloc[random_idx, 1]
             output["itm_labels"] = torch.zeros(1, dtype=torch.long)
 
