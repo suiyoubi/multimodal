@@ -14,7 +14,7 @@ from pytorch_lightning.callbacks import LearningRateMonitor, ModelCheckpoint
 from utils import build_config, build_datamodule_kwargs, build_imagenet_datamodule_kwargs, build_yfcc_datamodule_kwargs
 from datetime import timedelta
 import os
-
+import torch
 
 def main():
     config: FLAVAArguments = build_config()
@@ -83,7 +83,7 @@ def main():
                 filename="{epoch}-{step}",
                 train_time_interval=timedelta(minutes=config.training.save_every_min),
                 save_last=True,
-                save_top_k = -1
+                save_top_k = 2
             )
     ]
     if imagenet_datamodule:
@@ -103,6 +103,12 @@ def main():
         )
     if os.path.exists(prev_ckpt):
         print(f'Resuming from last checkpoint: {prev_ckpt}')
+        # Known issue with Pytorch-lightning that reset logger step incorrectly 
+        # https://github.com/PyTorchLightning/pytorch-lightning/issues/12274
+        checkpoint = torch.load(prev_ckpt, map_location='cpu')
+        global_step_offset = checkpoint['global_step']
+        trainer.fit_loop.epoch_loop._batches_that_stepped = global_step_offset
+        del checkpoint
     else:
         prev_ckpt = None
 
