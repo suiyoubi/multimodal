@@ -316,7 +316,6 @@ class MLMDataModule(TextDataModule):
         self.mlm_probability = mlm_probability
         self.ignore_index = ignore_index
 
-
     def setup(self, stage=None):
         if self.tokenizer is None:
             self.tokenizer = BertTokenizer.from_pretrained(TEXT_DEFAULT_TOKENIZER)
@@ -339,7 +338,6 @@ class MLMDataModule(TextDataModule):
             self.val_dataset_infos, split="validation"
         )
         self.val_dataset.set_transform(transform)
-
 
     def _build_dataloader(self, dataset, drop_last=True, shuffle=True):
         # uneven batches can cause distributed issues,

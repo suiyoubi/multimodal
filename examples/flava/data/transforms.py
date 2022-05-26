@@ -41,7 +41,9 @@ def encode_text(text, tokenizer, *args, **kwargs):
     return tokenizer(text, *args, **kwargs)
 
 
-def encode_text_batch(batch, tokenizer, text_columns, return_batch=False, *args, **kwargs):
+def encode_text_batch(
+    batch, tokenizer, text_columns, return_batch=False, *args, **kwargs
+):
     texts = [batch[column] for column in text_columns]
     tokens = tokenizer(*texts, *args, **kwargs)
     if return_batch:

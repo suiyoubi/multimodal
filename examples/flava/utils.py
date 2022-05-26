@@ -4,12 +4,14 @@
 # This source code is licensed under the BSD-style license found in the
 # LICENSE file in the root directory of this source tree.
 
-from definitions import DatasetInfo, FLAVAArguments, ImageFolderInfo, TrainingArguments, TrainingYFCCDatasetInfo
+from definitions import DatasetInfo, FLAVAArguments, ImageFolderInfo, TrainingArguments, TrainingYFCCDatasetInfo, TrainingSingleDatasetInfo
 from hydra.utils import instantiate
 from omegaconf import OmegaConf
 
 
-def build_datamodule_kwargs(dm_config: DatasetInfo, training_config: TrainingArguments):
+def build_datamodule_kwargs(
+    dm_config: TrainingSingleDatasetInfo, training_config: TrainingArguments
+):
     kwargs = {
         "train_infos": dm_config.train,
         "val_infos": dm_config.val,
