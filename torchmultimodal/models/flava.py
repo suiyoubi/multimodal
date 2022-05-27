@@ -380,31 +380,38 @@ class FLAVAModel(nn.Module, PretrainedMixin):
                 required_embedding = "image"
             else:
                 required_embedding = "text"
-
+        torch.cuda.nvtx.range_push("encode-image")
         image_outputs = self._encode_data_to_embeddings(
             image,
             required_embedding,
             ["image", "mm"],
             self.encode_image,
         )
+        torch.cuda.nvtx.range_pop()
+        torch.cuda.nvtx.range_push("encode-text")
         text_outputs = self._encode_data_to_embeddings(
             text,
             required_embedding,
             ["text", "mm"],
             self.encode_text,
         )
+        torch.cuda.nvtx.range_pop()
+        torch.cuda.nvtx.range_push("encode-image-masked")
         image_masked_outputs = self._encode_data_to_embeddings(
             image,
             required_embedding,
             ["image", "mm"],
             partial(self.encode_image, image_patches_mask=image_patches_mask),
         )
+        torch.cuda.nvtx.range_pop()
+        torch.cuda.nvtx.range_push("encode-text-masked")
         text_masked_outputs = self._encode_data_to_embeddings(
             text_masked,
             required_embedding,
             ["text", "mm"],
             self.encode_text,
         )
+        torch.cuda.nvtx.range_pop()
 
         multimodal_outputs = TransformerOutput()
         multimodal_masked_outputs = TransformerOutput()
@@ -412,6 +419,7 @@ class FLAVAModel(nn.Module, PretrainedMixin):
         if required_embedding == "mm":
             # Take last hidden state and not the last_hidden_state because
             # for flava we want the hidden state without final layernorm.
+            torch.cuda.nvtx.range_push("encode-mm")
             if not skip_unmasked_mm_encoder:
                 # Unmasked multimodal embedding is not currently used by any of the FLAVA losses.
                 multimodal_outputs = self.encode_mm(
@@ -430,6 +438,7 @@ class FLAVAModel(nn.Module, PretrainedMixin):
                 if text_masked_outputs.hidden_states
                 else None,
             )
+            torch.cuda.nvtx.range_pop()
 
         return FLAVAOutput(
             image=image_outputs,

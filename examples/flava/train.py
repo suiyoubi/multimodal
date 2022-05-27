@@ -14,7 +14,7 @@ from pytorch_lightning.callbacks import LearningRateMonitor, ModelCheckpoint
 from utils import build_config, build_datamodule_kwargs, build_imagenet_datamodule_kwargs, build_yfcc_datamodule_kwargs
 from datetime import timedelta
 import os
-
+import torch
 
 def main():
     config: FLAVAArguments = build_config()
@@ -105,12 +105,13 @@ def main():
         print(f'Resuming from last checkpoint: {prev_ckpt}')
     else:
         prev_ckpt = None
+    with torch.autograd.profiler.emit_nvtx():       
 
-    trainer.fit(
-        model, datamodule=datamodule,
-        ckpt_path=prev_ckpt
-    )
-    trainer.validate(model, datamodule=datamodule)
+        trainer.fit(
+            model, datamodule=datamodule,
+            ckpt_path=prev_ckpt
+        )
+    #trainer.validate(model, datamodule=datamodule)
 
 
 if __name__ == "__main__":

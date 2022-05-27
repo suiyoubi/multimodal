@@ -154,6 +154,7 @@ class TwoWayRandomResizedCrop(transforms.RandomResizedCrop):
         self.second_interpolation = second_interpolation
 
     def __call__(self, img):
+        torch.cuda.nvtx.range_push("2-way-random-resizecrop")
         i, j, h, w = self.get_params(img, self.scale, self.ratio)
         if isinstance(self.interpolation, (tuple, list)):
             interpolation = random.choice(self.interpolation)
@@ -161,14 +162,19 @@ class TwoWayRandomResizedCrop(transforms.RandomResizedCrop):
             interpolation = self.interpolation
 
         if self.second_size is None:
-            return F.resized_crop(img, i, j, h, w, self.size, interpolation)
+            ret = F.resized_crop(img, i, j, h, w, self.size, interpolation)
+            torch.cuda.nvtx.range_pop()
+            return ret
         else:
-            return (
+            torch.cuda.nvtx.range_push("2-way-random-resizecrop-2")
+            ret = (
                 F.resized_crop(img, i, j, h, w, self.size, interpolation),
                 F.resized_crop(
                     img, i, j, h, w, self.second_size, self.second_interpolation
                 ),
             )
+            torch.cuda.nvtx.range_pop()
+            return ret
 
 
 class TwoWayResize(transforms.Resize):
@@ -366,6 +372,7 @@ class MaskedImageModelingTransform:
         }
 
     def __call__(self, images: Union[List[Image.Image], Image.Image]):
+        torch.cuda.nvtx.range_push("MIM-Transform")
         if isinstance(images, list):
             output = {}
             for image in images:
@@ -374,9 +381,12 @@ class MaskedImageModelingTransform:
                     if key not in output:
                         output[key] = []
                     output[key].append(transformed_output[key])
+            torch.cuda.nvtx.range_pop()
             return output
         else:
-            return self.transform(images)
+            ret = self.transform(images)
+            torch.cuda.nvtx.range_pop()
+            return ret
 
 
 class VLTransform:
@@ -385,6 +395,7 @@ class VLTransform:
         self.text_transform = text_transform
 
     def __call__(self, info, dataset, itm_probability):
+        torch.cuda.nvtx.range_push("VL-Transform")
         output = {}
         text = info["text"]
         image = info["image"]
@@ -398,4 +409,5 @@ class VLTransform:
 
         output.update(self.image_transform(image))
         output.update(self.text_transform(text))
+        torch.cuda.nvtx.range_pop()
         return output

@@ -1,0 +1,388 @@
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:root:Pytorch pre-release version 1.11.0a0+17540c5 - assuming intent to test it
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+Initializing distributed: GLOBAL_RANK: 26, MEMBER: 27/32
+[W socket.cpp:634] The server socket on [dgx0026.nsv.rno1.nvmetal.net]:50534 is not yet listening (generic error: 111 - Connection refused).
+Initializing distributed: GLOBAL_RANK: 16, MEMBER: 17/32
+[W socket.cpp:634] The server socket on [dgx0026.nsv.rno1.nvmetal.net]:50534 is not yet listening (generic error: 111 - Connection refused).
+Initializing distributed: GLOBAL_RANK: 21, MEMBER: 22/32
+[W socket.cpp:634] The server socket on [dgx0026.nsv.rno1.nvmetal.net]:50534 is not yet listening (generic error: 111 - Connection refused).
+Initializing distributed: GLOBAL_RANK: 31, MEMBER: 32/32
+[W socket.cpp:634] The server socket on [dgx0026.nsv.rno1.nvmetal.net]:50534 is not yet listening (generic error: 111 - Connection refused).
+Initializing distributed: GLOBAL_RANK: 18, MEMBER: 19/32
+Initializing distributed: GLOBAL_RANK: 28, MEMBER: 29/32
+Initializing distributed: GLOBAL_RANK: 29, MEMBER: 30/32
+Initializing distributed: GLOBAL_RANK: 25, MEMBER: 26/32
+Initializing distributed: GLOBAL_RANK: 30, MEMBER: 31/32
+Initializing distributed: GLOBAL_RANK: 20, MEMBER: 21/32
+Initializing distributed: GLOBAL_RANK: 27, MEMBER: 28/32
+Initializing distributed: GLOBAL_RANK: 22, MEMBER: 23/32
+Initializing distributed: GLOBAL_RANK: 19, MEMBER: 20/32
+Initializing distributed: GLOBAL_RANK: 23, MEMBER: 24/32
+Initializing distributed: GLOBAL_RANK: 24, MEMBER: 25/32
+Initializing distributed: GLOBAL_RANK: 17, MEMBER: 18/32
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.builder:Reusing dataset red_caps (/root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be)
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-4d9721bcbe805fbb.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-1b5d0365fc26f87a.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/red_caps/jellyfish/1.0.0/d0d70a901e22f5e3b9a7af1f96f31c6243589705a5ab782b9ac69fcf727d97be/cache-300bd6b5f8e0a585.arrow
+LOCAL_RANK: 13 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 15 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 6 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 11 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 12 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 14 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 4 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 5 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 10 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 9 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 8 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+LOCAL_RANK: 7 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.

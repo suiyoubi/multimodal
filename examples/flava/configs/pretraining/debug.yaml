@@ -2,7 +2,7 @@ _target_: definitions.FLAVAArguments
 training:
   _target_: definitions.TrainingArguments
   lightning:
-    max_steps: 450000
+    max_steps: 4500
     accelerator: gpu
     devices: -1
     num_nodes: 1
@@ -29,8 +29,8 @@ datasets:
   - text
   image:
     _target_: definitions.ImageFolderInfo
-    train_root: ${oc.env:IMAGENET_TRAIN, /datasets/imagenet/uncompressed_train}
-    val_root: ${oc.env:IMAGENET_VAL, /datasets/imagenet/uncompressed_val}
+    train_root: ${oc.env:IMAGENET_TRAIN, /mount/data/imagenet}
+    val_root: ${oc.env:IMAGENET_VAL, /mount/data/imagenet}
   text:
     _target_: definitions.TrainingSingleDatasetInfo
     train:

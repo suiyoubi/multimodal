@@ -17,6 +17,7 @@ class YFCCDataset(Dataset):
     def __len__(self):
         return len(self.df)
     def __getitem__(self, idx):
+        torch.cuda.nvtx.range_push("YFCC-GetItem")
         image_key = self.df.iloc[idx, 0]
         image_filename = os.path.join(self.image_root, image_key[:3], image_key[3:6], image_key) + self.ext
         image = Image.open(image_filename)
@@ -38,4 +39,5 @@ class YFCCDataset(Dataset):
         for info in text_infos:
             text_infos[info] = text_infos[info].squeeze()
         output.update(text_infos)
+        torch.cuda.nvtx.range_pop()
         return output

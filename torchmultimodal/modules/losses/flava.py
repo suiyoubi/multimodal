@@ -117,6 +117,7 @@ class ITMLoss(nn.Module):
         hidden_states: Tensor,
         labels: Tensor,
     ):
+        torch.cuda.nvtx.range_push("ITM-Loss")
         if self.training:
             assert_labels_are_present(labels, "itm labels")
 
@@ -130,6 +131,7 @@ class ITMLoss(nn.Module):
                 scores.view(-1, 2),
                 labels.view(-1),
             )
+        torch.cuda.nvtx.range_pop()
         return ITMLossOutput(logits=scores, loss=loss)
 
 
@@ -164,10 +166,12 @@ class MaskedPredictionHead(nn.Module):
         self.decoder.bias = self.bias
 
     def forward(self, hidden_states: Tensor):
+        torch.cuda.nvtx.range_push("Masked-prediction-head")
         hidden_states = self.dense(hidden_states)
         hidden_states = self.transform_act_fn(hidden_states)
         hidden_states = self.layer_norm(hidden_states)
         hidden_states = self.decoder(hidden_states)
+        torch.cuda.nvtx.range_pop()
         return hidden_states
 
 
@@ -196,6 +200,7 @@ class MaskedPredictionLoss(nn.Module):
         self.ignore_nan = ignore_nan
 
     def forward(self, hidden_states: Tensor, masked_labels: Optional[Tensor] = None):
+        torch.cuda.nvtx.range_push("MaskedPrediction-Loss")
         if self.training:
             assert_labels_are_present(masked_labels, "masked labels")
 
@@ -221,7 +226,7 @@ class MaskedPredictionLoss(nn.Module):
         if torch.isnan(masked_loss) and self.ignore_nan:
             warnings.warn("NaN detected in masked_loss. Replacing it with 0.")
             masked_loss = torch.nan_to_num(masked_loss, nan=0.0)
-
+        torch.cuda.nvtx.range_pop()
         return MaskedPredictionLossOutput(
             logits=prediction,
             loss=masked_loss,
@@ -260,6 +265,7 @@ class FLAVAGlobalContrastiveLoss(nn.Module):
         text_sequence: Tensor,
         mask: Tensor,
     ):
+        torch.cuda.nvtx.range_push("Global-contrastive-loss")
         text_embedding = nn.functional.normalize(
             self.text_projection(text_sequence[:, self.text_embedding_index, :]), dim=-1
         )
@@ -278,7 +284,7 @@ class FLAVAGlobalContrastiveLoss(nn.Module):
             # Always true for FLAVA global contrastive loss
             backprop_in_gather=True,
         )
-
+        torch.cuda.nvtx.range_pop()
         return FLAVAGlobalContrastiveLossOutput(
             loss=output.loss,
             image_logits=output.image_logits,
