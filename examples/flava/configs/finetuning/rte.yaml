@@ -3,13 +3,13 @@ _target_: definitions.FLAVAArguments
 training:
   _target_: definitions.TrainingArguments
   lightning:
-    max_steps: 4320
-    gpus: -1
+    max_steps: 230
+    gpus: 8
     progress_bar_refresh_rate: 50
     val_check_interval: 1.0
     num_sanity_val_steps: 10
   seed: -1
-  batch_size: 32
+  batch_size: 16
   num_workers: 4
   learning_rate: 1e-5
   adam_eps: 1e-6
@@ -17,7 +17,8 @@ training:
   adam_betas:
   - 0.9
   - 0.98
-  warmup_steps: 259
+  warmup_steps: 13
+  metrics: ["accuracy"]
 
 
 datasets:
@@ -30,10 +31,7 @@ datasets:
     train:
       - _target_: definitions.HFDatasetInfo
         key: glue
-        subset: qnli
-        rename_columns:
-          - ["question", "sentence1"]
-          - ["sentence", "sentence2"]
+        subset: rte
     datamodule_extra_kwargs:
       text_columns: ["sentence1", "sentence2"]
 

@@ -97,6 +97,7 @@ class TrainingArguments:
     prev_v_num: int = 0
     save_every_min: int = 60
     metrics: List[str] = field(default_factory=lambda: ['accuracy']) 
+    lightning_ckpt: Optional[str] = None
 
 
 @dataclass

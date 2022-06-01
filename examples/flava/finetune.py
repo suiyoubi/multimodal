@@ -7,7 +7,7 @@
 from data import TextDataModule, TorchVisionDataModule
 from data.datamodules import VLDataModule
 from definitions import FLAVAArguments
-from model import FLAVAClassificationLightningModule
+from model import FLAVAClassificationLightningModule, FLAVAPreTrainingLightningModule
 from omegaconf import OmegaConf
 from pytorch_lightning import seed_everything, Trainer
 from pytorch_lightning.callbacks import LearningRateMonitor
@@ -63,6 +63,11 @@ def main():
         ],
         strategy="ddp",
     )
+
+    if config.training.lightning_ckpt is not None:
+        print(f'Loading lightning_ckpt from {config.training.lightning_ckpt}')
+        pretrainedModel = FLAVAPreTrainingLightningModule.load_from_checkpoint(config.training.lightning_ckpt)
+        model.model.model = pretrainedModel.model.model
     trainer.fit(model, datamodule=datamodule)
     trainer.validate(model, datamodule=datamodule)
 
