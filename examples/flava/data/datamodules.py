@@ -101,6 +101,7 @@ class ImageDataModule(LightningDataModule):
             num_workers=self.num_workers,
             sampler=None,
             shuffle=True,
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             # ideally, we don't need to drop these for unimodal cases
@@ -115,6 +116,7 @@ class ImageDataModule(LightningDataModule):
             num_workers=self.num_workers,
             sampler=None,
             shuffle=False,
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             # ideally, we don't need to drop these for unimodal cases
@@ -189,6 +191,7 @@ class ImageDataModuleOld(LightningDataModule):
             num_workers=self.num_workers,
             sampler=sampler,
             shuffle=True,
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             # ideally, we don't need to drop these for unimodal cases
@@ -203,6 +206,7 @@ class ImageDataModuleOld(LightningDataModule):
             num_workers=self.num_workers,
             sampler=None,
             shuffle=False,
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             # ideally, we don't need to drop these for unimodal cases
@@ -283,6 +287,7 @@ class TextDataModule(LightningDataModule):
             num_workers=self.num_workers,
             sampler=None,
             shuffle=shuffle,
+            pin_memory=True,
             collate_fn=self._build_collator(),
             drop_last=drop_last,
         )
@@ -481,6 +486,7 @@ class VLDataModule(LightningDataModule):
             sampler=None,
             shuffle=True,
             collate_fn=self._build_collator(),
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             drop_last=True,
@@ -494,6 +500,7 @@ class VLDataModule(LightningDataModule):
             sampler=None,
             shuffle=False,
             collate_fn=self._build_collator(),
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             drop_last=True,
@@ -584,6 +591,7 @@ class YFCCDataModule(LightningDataModule):
             sampler=None,
             shuffle=True,
             collate_fn=self._build_collator(),
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             drop_last=True,
@@ -597,6 +605,7 @@ class YFCCDataModule(LightningDataModule):
             sampler=None,
             shuffle=False,
             collate_fn=self._build_collator(),
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             drop_last=True,
@@ -718,6 +727,7 @@ class TorchVisionDataModule(LightningDataModule):
             shuffle=shuffle,
             batch_size=self.batch_size,
             num_workers=self.num_workers,
+            pin_memory=True,
         )
 
     def on_before_batch_transfer(self, batch, *args):
