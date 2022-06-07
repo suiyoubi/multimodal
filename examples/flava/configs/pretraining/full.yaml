@@ -37,7 +37,8 @@ datasets:
       - _target_: definitions.HFDatasetInfo
         key: cc_news
       - _target_: definitions.HFDatasetInfo
-        key: bookcorpus
+        key: wikitext
+        subset: wikitext-103-raw-v1
     val:
       - _target_: definitions.HFDatasetInfo
         key: wikitext
