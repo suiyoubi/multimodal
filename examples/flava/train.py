@@ -104,9 +104,9 @@ def main():
     # Resume from the latest run
     # Try to find the latest version num to resume on in case any intermediate run fails
     lightning_logs_dir = os.path.join(config.training.lightning['default_root_dir'], 'lightning_logs')
+    prev_ckpt = None
     if os.path.exists(lightning_logs_dir):
         latest_num = -1
-        prev_ckpt = None
         for version_str in sorted(os.listdir(lightning_logs_dir)):
             version_num = int(version_str.replace('version_', ''))
             ckpt_dir = os.path.join(lightning_logs_dir, version_str, 'checkpoints', 'last.ckpt')
@@ -114,9 +114,7 @@ def main():
                 version_num = latest_num
                 prev_ckpt = ckpt_dir
 
-
-
-    if os.path.exists(prev_ckpt):
+    if prev_ckpt is not None and os.path.exists(prev_ckpt):
         print(f'Resuming from last checkpoint: {prev_ckpt}')
         # Known issue with Pytorch-lightning that reset logger step incorrectly 
         # https://github.com/PyTorchLightning/pytorch-lightning/issues/12274
@@ -124,8 +122,6 @@ def main():
         global_step_offset = checkpoint['global_step']
         trainer.fit_loop.epoch_loop._batches_that_stepped = global_step_offset
         del checkpoint
-    else:
-        prev_ckpt = None
 
     trainer.fit(
         model, datamodule=datamodule,
