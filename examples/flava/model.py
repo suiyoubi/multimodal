@@ -14,6 +14,7 @@ from torchmultimodal.models.flava import (
 )
 from transformers.optimization import get_cosine_schedule_with_warmup
 import torchmetrics
+import apex
 
 def get_optimizers_for_lightning(
     model: torch.nn.Module,
@@ -24,7 +25,7 @@ def get_optimizers_for_lightning(
     warmup_steps: int,
     max_steps: int,
 ):
-    optimizer = torch.optim.AdamW(
+    optimizer = apex.optimizers.FusedAdam(
         model.parameters(),
         lr=learning_rate,
         betas=adam_betas,
