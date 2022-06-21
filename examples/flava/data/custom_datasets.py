@@ -28,13 +28,19 @@ class YFCCDataset(Dataset):
         if random.random() < self.itm_probability:
             random_idx = random.randint(0, len(self.df) - 1)
             while idx == random_idx:
+                random_idx = random.randint(0, len(self.df) - 1)
                 text = self.df.iloc[random_idx, 1]
             output["itm_labels"] = torch.zeros(1, dtype=torch.long)
 
         output.update(self.image_transform(image))
         # TODO Need to refactor the logic here
         output["itm_labels"] = output["itm_labels"].squeeze()
-        text_infos = self.text_transform(text)
+        try:
+            text_infos = self.text_transform(text)
+        except ValueError as e:
+            text_infos = self.text_transform("")
+            print(e)
+            print(f"ERROR: text is {text} for idx {idx}, image filename is {image_filename}")
         for info in text_infos:
             text_infos[info] = text_infos[info].squeeze()
         output.update(text_infos)

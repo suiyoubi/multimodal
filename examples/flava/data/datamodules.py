@@ -101,6 +101,7 @@ class ImageDataModule(LightningDataModule):
             num_workers=self.num_workers,
             sampler=None,
             shuffle=True,
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             # ideally, we don't need to drop these for unimodal cases
@@ -115,6 +116,7 @@ class ImageDataModule(LightningDataModule):
             num_workers=self.num_workers,
             sampler=None,
             shuffle=False,
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             # ideally, we don't need to drop these for unimodal cases
@@ -189,6 +191,7 @@ class ImageDataModuleOld(LightningDataModule):
             num_workers=self.num_workers,
             sampler=sampler,
             shuffle=True,
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             # ideally, we don't need to drop these for unimodal cases
@@ -203,6 +206,7 @@ class ImageDataModuleOld(LightningDataModule):
             num_workers=self.num_workers,
             sampler=None,
             shuffle=False,
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             # ideally, we don't need to drop these for unimodal cases
@@ -241,18 +245,15 @@ class TextDataModule(LightningDataModule):
         if self.val_dataset_infos is None:
             self.val_dataset_infos = train_infos
         self.tokenizer = tokenizer
+        if self.tokenizer is None:
+            self.tokenizer = BertTokenizer.from_pretrained(TEXT_DEFAULT_TOKENIZER)
         self.max_length = max_length
         self.batch_size = batch_size
         self.num_workers = num_workers
         self.allow_uneven_batches = allow_uneven_batches
-
-    def setup(self, stage=None):
-        if self.tokenizer is None:
-            self.tokenizer = BertTokenizer.from_pretrained(TEXT_DEFAULT_TOKENIZER)
-        transform = partial(
+        self.transform = partial(
             encode_text_batch,
             tokenizer=self.tokenizer,
-            text_columns=['text'],
             padding="max_length",
             max_length=self.max_length,
             truncation=True,
@@ -261,14 +262,17 @@ class TextDataModule(LightningDataModule):
             text_columns=self.text_columns,
             return_batch=True,
         )
+
+    def setup(self, stage=None):
+
         self.train_dataset = build_datasets_from_info(
             self.train_dataset_infos, split="train"
         )
-        self.train_dataset.set_transform(transform)
+        self.train_dataset.set_transform(self.transform)
         self.val_dataset = build_datasets_from_info(
             self.val_dataset_infos, split="validation"
         )
-        self.val_dataset.set_transform(transform)
+        self.val_dataset.set_transform(self.transform)
 
     def train_dataloader(self):
         return self._build_dataloader(self.train_dataset)
@@ -283,6 +287,7 @@ class TextDataModule(LightningDataModule):
             num_workers=self.num_workers,
             sampler=None,
             shuffle=shuffle,
+            pin_memory=True,
             collate_fn=self._build_collator(),
             drop_last=drop_last,
         )
@@ -481,6 +486,7 @@ class VLDataModule(LightningDataModule):
             sampler=None,
             shuffle=True,
             collate_fn=self._build_collator(),
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             drop_last=True,
@@ -494,6 +500,7 @@ class VLDataModule(LightningDataModule):
             sampler=None,
             shuffle=False,
             collate_fn=self._build_collator(),
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             drop_last=True,
@@ -584,6 +591,7 @@ class YFCCDataModule(LightningDataModule):
             sampler=None,
             shuffle=True,
             collate_fn=self._build_collator(),
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             drop_last=True,
@@ -597,6 +605,7 @@ class YFCCDataModule(LightningDataModule):
             sampler=None,
             shuffle=False,
             collate_fn=self._build_collator(),
+            pin_memory=True,
             # uneven batches can cause distributed issues,
             # drop last batch to prevent those.
             drop_last=True,
@@ -718,6 +727,7 @@ class TorchVisionDataModule(LightningDataModule):
             shuffle=shuffle,
             batch_size=self.batch_size,
             num_workers=self.num_workers,
+            pin_memory=True,
         )
 
     def on_before_batch_transfer(self, batch, *args):

@@ -289,6 +289,7 @@ def flava_model_for_pretraining(
     )
 
     if pretrained_model_key is not None:
+        print(f'Load Pretrained model: {pretrained_model_key}')
         flava.load_model(FLAVA_FOR_PRETRAINED_MAPPING[pretrained_model_key])
 
     return flava
@@ -304,7 +305,12 @@ def flava_model_for_classification(
     loss_fn: Optional[Callable[..., Tensor]] = None,
     **flava_model_kwargs: Any,
 ):
-    model = flava_model(**flava_model_kwargs)
+
+    if flava_model_kwargs is not None:
+        flava_pretrained = flava_model_for_pretraining(**flava_model_kwargs)
+        model = flava_pretrained.model
+    else:
+        model = flava_model(**flava_model_kwargs)
     classifier = MLP(
         in_dim=classifier_in_dim,
         out_dim=num_classes,
