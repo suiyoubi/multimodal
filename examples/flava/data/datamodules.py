@@ -12,7 +12,7 @@ import torch
 import torchvision
 import numpy as np
 import pandas as pd
-from definitions import HFDatasetInfo, TorchVisionDatasetInfo
+from flava.definitions import HFDatasetInfo, TorchVisionDatasetInfo
 from pytorch_lightning import LightningDataModule
 from transformers import (
     BertTokenizer,

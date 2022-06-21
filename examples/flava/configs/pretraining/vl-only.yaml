@@ -1,6 +1,6 @@
-_target_: definitions.FLAVAArguments
+_target_: flava.definitions.FLAVAArguments
 training:
-  _target_: definitions.TrainingArguments
+  _target_: flava.definitions.TrainingArguments
   lightning:
     max_steps: 450000
     accelerator: gpu
@@ -22,10 +22,10 @@ training:
   save_every_min: 60
 
 datasets:
-  _target_: definitions.TrainingDatasetsInfo
+  _target_: flava.definitions.TrainingDatasetsInfo
   selected:
   - vl
   vl:
-    _target_: definitions.TrainingYFCCDatasetInfo
+    _target_: flava.definitions.TrainingYFCCDatasetInfo
     metadata_path: ${oc.env:YFCC_META, .}
     image_root: ${oc.env:YFCC_IMAGE, .}

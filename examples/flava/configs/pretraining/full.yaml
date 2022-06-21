@@ -1,6 +1,6 @@
-_target_: definitions.FLAVAArguments
+_target_: flava.definitions.FLAVAArguments
 training:
-  _target_: definitions.TrainingArguments
+  _target_: flava.definitions.TrainingArguments
   lightning:
     max_steps: 450000
     accelerator: gpu
@@ -22,30 +22,30 @@ training:
   save_every_min: 60
 
 datasets:
-  _target_: definitions.TrainingDatasetsInfo
+  _target_: flava.definitions.TrainingDatasetsInfo
   selected:
   - image
   - vl
   - text
   image:
-    _target_: definitions.ImageFolderInfo
+    _target_: flava.definitions.ImageFolderInfo
     train_root: ${oc.env:IMAGENET_TRAIN, /datasets/imagenet/uncompressed_train}
     val_root: ${oc.env:IMAGENET_VAL, /datasets/imagenet/uncompressed_val}
   text:
-    _target_: definitions.TrainingSingleDatasetInfo
+    _target_: flava.definitions.TrainingSingleDatasetInfo
     train:
-      - _target_: definitions.HFDatasetInfo
+      - _target_: flava.definitions.HFDatasetInfo
         key: cc_news
-      - _target_: definitions.HFDatasetInfo
+      - _target_: flava.definitions.HFDatasetInfo
         key: wikitext
         subset: wikitext-103-raw-v1
     val:
-      - _target_: definitions.HFDatasetInfo
+      - _target_: flava.definitions.HFDatasetInfo
         key: wikitext
         subset: wikitext-103-raw-v1
     datamodule_extra_kwargs:
       text_columns: ["text"]
   vl:
-    _target_: definitions.TrainingYFCCDatasetInfo
+    _target_: flava.definitions.TrainingYFCCDatasetInfo
     metadata_path: ${oc.env:YFCC_META, .}
     image_root: ${oc.env:YFCC_IMAGE, .}
