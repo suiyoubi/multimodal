@@ -1,4 +1,3 @@
-from regex import E
 import torch
 import random
 import os
