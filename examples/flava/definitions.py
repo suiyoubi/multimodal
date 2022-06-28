@@ -81,6 +81,18 @@ class TrainingDatasetsInfo:
     vl: Optional[TrainingYFCCDatasetInfo] = None
     num_classes: int = MISSING
 
+@dataclass
+class EncoderInfo:
+    # TODO: Config Encoder classes to use
+    weight_freeze: bool = False
+    state_dict: Optional[str] = None
+    # TODO: Config Encoder params: hidden size, # num_attention_heads, etc
+
+@dataclass
+class EncodersInfo:
+    image: Optional[EncoderInfo] = None
+    text: Optional[EncoderInfo] = None
+    vl: Optional[EncoderInfo] = None
 
 @dataclass
 class TrainingArguments:
@@ -111,3 +123,4 @@ class FLAVAArguments:
     datasets: TrainingDatasetsInfo = TrainingDatasetsInfo()
     training: TrainingArguments = TrainingArguments()
     model: ModelArguments = ModelArguments()
+    encoders: EncodersInfo = EncodersInfo()

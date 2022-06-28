@@ -49,3 +49,10 @@ datasets:
     _target_: flava.definitions.TrainingYFCCDatasetInfo
     metadata_path: ${oc.env:YFCC_META, .}
     image_root: ${oc.env:YFCC_IMAGE, .}
+
+encoders:
+  _target_: flava.definitions.EncodersInfo
+  text:
+    _target_: flava.definitions.EncoderInfo
+    weight_freeze: False
+    state_dict: ${oc.env:TEXT_ENCODER_PTH, null}

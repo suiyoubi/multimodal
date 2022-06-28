@@ -78,6 +78,11 @@ def main():
         **config.model,
     )
 
+    # Load Text Encoder weights
+    if config.encoders.text.state_dict is not None:
+        print(f'Load Text Checkpoint from {config.encoders.text.state_dict}')
+        model.model.model.text_encoder.load_state_dict(torch.load(config.encoders.text.state_dict), strict=True)
+
     callbacks = [
             LearningRateMonitor(logging_interval="step"),
             ModelCheckpoint(

@@ -56,6 +56,46 @@ FLAVA_FOR_PRETRAINED_MAPPING = {
 }
 
 
+def DINO_image_encoder(
+    hidden_size: int = 768,
+    num_attention_heads: int = 12,
+    num_hidden_layers: int = 12,
+    use_image_masking: bool = True,
+    hidden_dropout_prob: float = 0.0,
+    intermediate_size: int = 3072,
+    intermediate_activation: Callable[..., Tensor] = nn.functional.gelu,
+    attention_probs_dropout_prob: float = 0.0,
+    layer_norm_eps: float = 1e-12,
+    image_size: int = 224,
+    patch_size: int = 16,
+    num_channels: int = 3,
+):
+    print('Load pretrained image encoder from DINO')
+    from transformers import ViTModel
+    dino_transformer = ViTModel.from_pretrained('facebook/dino-vitb16')
+    # The only difference in weights between FLAVA Image Encoder and DINO Encoder is:
+    # FLAVA has mask weight （mask_token）in embedding layer
+    embeddings = ImageEmbeddings(
+        image_size=image_size,
+        patch_size=patch_size,
+        num_channels=num_channels,
+        hidden_size=hidden_size,
+        hidden_dropout_prob=hidden_dropout_prob,
+        use_image_masking=use_image_masking,
+    )
+    # Copy weights from DINO embedding to FLAVA embedding
+    # strict=False to ignore mask_token
+    embeddings.load_state_dict(dino_transformer.embeddings.state_dict(), strict=False)
+
+    layernorm = Fp32LayerNorm(hidden_size, eps=layer_norm_eps)
+    pooler = Pooler(hidden_size=hidden_size)
+    return ImageTransformer(
+        embeddings=embeddings,
+        encoder=dino_transformer.encoder,
+        layernorm=layernorm,
+        pooler=pooler,
+    )
+
 def flava_image_encoder(
     hidden_size: int = 768,
     num_attention_heads: int = 12,
@@ -219,7 +259,8 @@ def flava_model(
     multimodal_layer_norm_eps: float = 1e-12,
     **kwargs: Any,
 ):
-    image_encoder = flava_image_encoder(
+
+    image_encoder = DINO_image_encoder(
         hidden_size=image_hidden_size,
         num_attention_heads=image_num_attention_heads,
         num_hidden_layers=image_num_hidden_layers,
@@ -778,10 +819,13 @@ class ImageTransformer(nn.Module):
             pixel_values, image_patches_mask=image_patches_mask
         )
 
-        encoder_outputs = self.encoder(
-            embedding_output,
-            attention_mask=attention_mask,
-        )
+        if attention_mask is None:
+            encoder_outputs = self.encoder(embedding_output)
+        else:
+            encoder_outputs = self.encoder(
+                embedding_output,
+                attention_mask=attention_mask,
+            )
         sequence_output = encoder_outputs[0]
         sequence_output = self.layernorm(sequence_output)
         pooled_output = (
