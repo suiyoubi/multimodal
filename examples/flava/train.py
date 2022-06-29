@@ -78,11 +78,6 @@ def main():
         **config.model,
     )
 
-    # Load Text Encoder weights
-    if config.encoders.text.state_dict is not None:
-        print(f'Load Text Checkpoint from {config.encoders.text.state_dict}')
-        model.model.model.text_encoder.load_state_dict(torch.load(config.encoders.text.state_dict), strict=True)
-
     callbacks = [
             LearningRateMonitor(logging_interval="step"),
             ModelCheckpoint(
@@ -128,6 +123,13 @@ def main():
         global_step_offset = checkpoint['global_step']
         trainer.fit_loop.epoch_loop._batches_that_stepped = global_step_offset
         del checkpoint
+
+    if prev_ckpt is None:
+        # Load Text Encoder weights
+        if config.encoders.text.state_dict is not None:
+            print(f'Load Text Checkpoint from {config.encoders.text.state_dict}')
+            model.model.model.text_encoder.load_state_dict(torch.load(config.encoders.text.state_dict), strict=True)
+        # TODO Load other encoder weights here
 
     trainer.fit(
         model, datamodule=datamodule,
