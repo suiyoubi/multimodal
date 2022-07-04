@@ -571,7 +571,7 @@ class YFCCDataModule(LightningDataModule):
         self.mlm_probability = mlm_probability
     def setup(self, stage=None):
         # Read the metada data file: csv
-        meta_df = pd.read_csv(self.metadata_path, compression='gzip', header=0, usecols=['key', 'title', 'description'])
+        meta_df = pd.read_csv(self.metadata_path, compression='gzip', header=0)
         # Shuffle (in-place) and split the dataframe
         train_df = meta_df.sample(frac=self.train_data_fraction, random_state=self.data_split_random_seed).reset_index(drop=True)
         val_df = meta_df.drop(train_df.index).sample(frac=1.0).reset_index(drop=True)

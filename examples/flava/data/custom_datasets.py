@@ -21,9 +21,7 @@ class YFCCDataset(Dataset):
         image_filename = os.path.join(self.image_root, image_key[:3], image_key[3:6], image_key) + self.ext
         image = Image.open(image_filename)
         # Use description field if exists. Otherwise use title field instead.
-        # Replace seprator from "+" with " "
         text = self.df.iloc[idx, 2] if self.df.iloc[idx, 2] is not None else self.df.iloc[idx, 1]
-        text = text.replace('+', ' ')
         # Transforms
         output = {}
         if self.itm_probability > 0:
